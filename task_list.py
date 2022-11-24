@@ -64,9 +64,16 @@ def update_task(given_task, task_list):
     for task in task_list:
         if task["description"] == given_task:
             task["completed"] = True
-            # print(task_list)
+            return task_list
 
 # Add a task to the list
-def add_task( ,task_list)
+def add_task(task_list):
+    task_description = input(("Please enter the tasks description "))
+    task_time_taken = input("Please enter the time taken to complete the task ")
+    new_task = { "description": task_description, "completed": False, "time_taken": task_time_taken}
+    task_list.append(new_task)
+    return task_list
+
 
 # update_task("Wash Dishes", tasks)
+# print(add_task(tasks))
